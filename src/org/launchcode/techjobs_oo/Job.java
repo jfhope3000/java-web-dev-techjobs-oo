@@ -8,7 +8,7 @@ public class Job {
     private static int nextId = 1;
 
     private String name;
-    private String employer;
+    private Employer employer;
     private Location location;
     private PositionType positionType;
     private CoreCompetency coreCompetency;
@@ -22,7 +22,7 @@ public class Job {
         nextId++;
     }
 
-    public Job(String name, String employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
+    public Job(String name, Employer employer, Location location, PositionType positionType, CoreCompetency coreCompetency) {
         this();
         this.name = name;
         this.employer = employer;
@@ -65,11 +65,9 @@ public class Job {
         this.name = name;
     }
 
-    public String getEmployer() {
-        return employer;
-    }
+    public Employer getEmployer() { return employer; }
 
-    public void setEmployer(String employer) {
+    public void setEmployer(Employer employer) {
         this.employer = employer;
     }
 
