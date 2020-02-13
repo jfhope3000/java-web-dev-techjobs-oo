@@ -33,7 +33,6 @@ public class Job {
     }
 
 
-
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
@@ -66,7 +65,9 @@ public class Job {
         this.name = name;
     }
 
-    public Employer getEmployer() { return employer; }
+    public Employer getEmployer() {
+        return employer;
+    }
 
     public void setEmployer(Employer employer) {
         this.employer = employer;
@@ -97,9 +98,8 @@ public class Job {
     }
 
     public String toString() {
-        System.out.println("\nID:" + this.id + "\nNAME:");
-        ;
-        return toString();
+        String jobData = "\nID: " + this.id + "\nName: " + this.name + "\nEmployer: " + this.employer + "\nLocation: " + this.location + "\nPosition Type: " + this.positionType + "\nCore Competency: " + this.coreCompetency + "\n";
+        System.out.println(jobData);
+        return jobData;
     }
-
 }

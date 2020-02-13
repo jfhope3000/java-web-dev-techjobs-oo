@@ -55,7 +55,9 @@ public class JobTest {
 
     @Test
     public void toStringOne() {
-        assertTrue(testJobTwo.toString() == ("\nID: " + testJobOne.getId() + "\nNAME:"));
+        String jobDataTest = "\nID: " + testJobTwo.getId() + "\nName: " + testJobTwo.getName() + "\nEmployer: " + testJobTwo.getEmployer() + "\nLocation: " + testJobTwo.getLocation() + "\nPosition Type: " + testJobTwo.getPositionType() + "\nCore Competency: " + testJobTwo.getCoreCompetency() + "\n";
+        assertEquals(jobDataTest, testJobTwo.toString());
     }
+
 
 }
