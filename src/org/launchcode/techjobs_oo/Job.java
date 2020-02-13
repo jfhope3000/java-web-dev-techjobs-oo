@@ -33,6 +33,7 @@ public class Job {
     }
 
 
+
     // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
     //  match.
 
@@ -93,6 +94,12 @@ public class Job {
 
     public void setCoreCompetency(CoreCompetency coreCompetency) {
         this.coreCompetency = coreCompetency;
+    }
+
+    public String toString() {
+        System.out.println("\nID:" + this.id + "\nNAME:");
+        ;
+        return toString();
     }
 
 }

@@ -7,6 +7,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.junit.Assert.assertThat;
 
 import org.junit.After;
 import org.junit.AfterClass;
@@ -52,6 +53,9 @@ public class JobTest {
         assertFalse( testJobTwo.getId() == testJobThree.getId());
     }
 
-
+    @Test
+    public void toStringOne() {
+        assertTrue(testJobTwo.toString() == ("\nID: " + testJobOne.getId() + "\nNAME:"));
+    }
 
 }
