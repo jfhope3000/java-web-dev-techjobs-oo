@@ -13,10 +13,6 @@ public class Job {
     private PositionType positionType;
     private CoreCompetency coreCompetency;
 
-    // TODO: Add two constructors - one to initialize a unique ID and a second to initialize the
-    //  other five fields. The second constructor should also call the first in order to initialize
-    //  the 'id' field.
-
     public Job() {
         this.id = nextId;
         nextId++;
@@ -32,10 +28,6 @@ public class Job {
 
     }
 
-
-    // TODO: Add custom equals and hashCode methods. Consider two Job objects "equal" when their id fields
-    //  match.
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -44,14 +36,9 @@ public class Job {
         return getId() == job.getId();
     }
 
-    @Override
     public int hashCode() {
         return Objects.hash(getId());
     }
-
-
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
-    //  and id.
 
     public int getId() {
         return id;
@@ -98,8 +85,44 @@ public class Job {
     }
 
     public String toString() {
-        String jobData = "\nID: " + this.id + "\nName: " + this.name + "\nEmployer: " + this.employer + "\nLocation: " + this.location + "\nPosition Type: " + this.positionType + "\nCore Competency: " + this.coreCompetency + "\n";
+        if (name.equals("") || name == null) {
+            name = "Data not available";
+        }
+
+        if (employer.getValue().equals("") || employer.getValue() == null) {
+            employer.setValue("Data not available");
+        }
+
+        if (location.getValue().equals("") || location.getValue() == null) {
+            location.setValue("Data not available");
+        }
+
+        if (positionType.getValue().equals("") || positionType.getValue() == null) {
+            positionType.setValue("Data not available");
+        }
+
+        if (coreCompetency.getValue().equals("") || coreCompetency.getValue() == null) {
+            coreCompetency.setValue("Data not available");
+        }
+
+
+        String jobData = "\nID: " + id + "\nName: " + name + "\nEmployer: " + this.employer + "\nLocation: " + this.location + "\nPosition Type: " + this.positionType + "\nCore Competency: " + this.coreCompetency + "\n";
         System.out.println(jobData);
         return jobData;
     }
+
+/*    public String toString() {
+        String nameAvailable = this.name;
+        if (nameAvailable)
+        Employer employerAvailable = this.employer;
+        Location locationAvailable = this.location;
+        PositionType positionTypeAvailable = this.positionType;
+        CoreCompetency coreCompetencyAvailable = this.coreCompetency;
+
+        String jobData = "\nID: " + this.id + "\nName: " + this.name + "\nEmployer: " + this.employer + "\nLocation: " + this.location + "\nPosition Type: " + this.positionType + "\nCore Competency: " + this.coreCompetency + "\n";
+        if (nameAvailable || employerAvailable, locationAvailable, positionTypeAvailable, coreCompetencyAvailable == null) {
+            System.out.println("Data not available");
+        }
+        return jobData;
+    }*/
 }
