@@ -61,27 +61,10 @@ public class JobTest {
         assertEquals(jobDataTest, testJobTwo.toString());
     }
 
-/*
     @Test
     public void emptyValue() {
-        Job dataNotAvail = new Job("Data not available",
-                new Employer("Data not available"),
-                new Location("Data not available"),
-                new PositionType("Data not available"),
-                new CoreCompetency("Data not available"));
-        testJobNull.toString();
-        assertEquals(dataNotAvail.getName(), testJobNull.getName());
-        assertEquals(dataNotAvail.getLocation(), testJobNull.getLocation());
-        assertEquals(dataNotAvail.getPositionType(), testJobNull.getPositionType());
-        assertEquals(dataNotAvail.getCoreCompetency(), testJobNull.getCoreCompetency());
-
+        String jobExpected = "\nID: " + "4" + "\nName: " + "Data not available" + "\nEmployer: " + "Data not available" + "\nLocation: " + "Data not available" + "\nPosition Type: " + "Data not available" + "\nCore Competency: " + "Data not available" + "\n";
+        String jobActual = testJobNull.toString();
+        assertEquals(jobActual, jobExpected);
     }
-*/
-
-  /*  @Test
-    public void emptyValue() {
-        String notNull = "Data not available";
-         assertEquals(notNull, testJobNull.getName().toString());
-        }
-*/
 }

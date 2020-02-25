@@ -110,19 +110,4 @@ public class Job {
         System.out.println(jobData);
         return jobData;
     }
-
-/*    public String toString() {
-        String nameAvailable = this.name;
-        if (nameAvailable)
-        Employer employerAvailable = this.employer;
-        Location locationAvailable = this.location;
-        PositionType positionTypeAvailable = this.positionType;
-        CoreCompetency coreCompetencyAvailable = this.coreCompetency;
-
-        String jobData = "\nID: " + this.id + "\nName: " + this.name + "\nEmployer: " + this.employer + "\nLocation: " + this.location + "\nPosition Type: " + this.positionType + "\nCore Competency: " + this.coreCompetency + "\n";
-        if (nameAvailable || employerAvailable, locationAvailable, positionTypeAvailable, coreCompetencyAvailable == null) {
-            System.out.println("Data not available");
-        }
-        return jobData;
-    }*/
 }
